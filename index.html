@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player de Áudio Minimalista</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="player-container">
+        <div class="main-player">
+            <div class="cover-wrapper">
+                <img id="cover" src="" alt="Capa do Álbum">
+            </div>
+
+            <div class="track-info">
+                <h2 id="title">Título da Música</h2>
+                <p id="artist">Nome do Artista</p>
+            </div>
+
+            <div class="progress-container">
+                <input type="range" id="progress-bar" min="0" max="100" value="0">
+                <div class="time-info">
+                    <span id="current-time">0:00</span>
+                    <span id="duration">0:00</span>
+                </div>
+            </div>
+
+            <div class="main-controls">
+                <button id="shuffle-btn" class="control-btn secondary" title="Aleatório">🔀</button>
+                <button id="prev-btn" class="control-btn" title="Anterior">⏮</button>
+                <button id="play-btn" class="control-btn primary" title="Reproduzir">▶</button>
+                <button id="next-btn" class="control-btn" title="Próxima">⏭</button>
+                <button id="repeat-btn" class="control-btn secondary" title="Repetir">🔁</button>
+            </div>
+
+            <div class="volume-container">
+                <button id="mute-btn" class="control-btn secondary">🔊</button>
+                <input type="range" id="volume-bar" min="0" max="1" step="0.01" value="0.8">
+            </div>
+        </div>
+
+        <div class="playlist-container">
+            <h3>Playlist</h3>
+            <ul id="playlist"></ul>
+        </div>
+    </div>
+
+    <audio id="audio-player"></audio>
+    <script src="script.js"></script>
+</body>
+
+</html>
